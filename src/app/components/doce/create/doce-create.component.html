@@ -1,0 +1,11 @@
+<h1 class="w3-center w3-container w3-red">Cadastro de doce</h1>
+    <form class="w3-container">
+        <div><label for="txtDescricao">Descricão:<input type="text" id="txtDescricao" class="w3-input w3-border w3-round" name="Descricao" [(ngModel)]="doce.Descricao"></label></div>
+        <div><label for="txtQuantidade">Quantidade:<input type="text" id="txtQuantidade" class="w3-input w3-border w3-round" name="quantidade" [(ngModel)]="doce.Quantidade"></label></div>
+        <div><label for="txtValor">Valor:<input type="text" id="txtValor" class="w3-input w3-border w3-round" name="Valor" [(ngModel)]="doce.Valor"></label></div>
+        <div><label for="txtDataFab">Data De Fabricação:<input type="date" id="txtDataFab" class="w3-input w3-border w3-round" name="DataFab" [(ngModel)]="doce.DataFab"></label></div>
+        <div class= "w3-margin">
+            <button type="button" id="btnVoltar" class="w3-btn w3-red w3-margin-left" (click)="goToIndex()">Voltar</button>
+            <button type="button" id="btnSalvar" class="w3-btn w3-red w3-margin-left" (click)="post()">Salvar</button>
+        </div>
+    </form>

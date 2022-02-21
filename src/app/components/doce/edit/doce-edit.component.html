@@ -1,0 +1,11 @@
+<h1 class="w3-center w3-container w3-red">Alteração de Doce</h1>
+    <form class="w3-container">
+        <div><label>Descrição:</label><input class="w3-input w3-border w3-round" type="text" id="txtDescricao" maxlength="1000" name="descricao" [(ngModel)]="doce.Descricao"></div>
+        <div><label>Quantidade:</label><input class="w3-input w3-border w3-round" type="text" id="txtQuantidade" name="quantidade" [(ngModel)]="doce.Quantidade"></div>
+        <div><label>Valor:</label><input class="w3-input w3-border w3-round" type="text" id="txtValor" name="valor" [(ngModel)]="doce.Valor"></div>
+        <div><label>Data de Fabricação:</label><input class="w3-input w3-border w3-round" type="date" id="txtDataFab" name="dataFab" [ngModel] = "doce.DataFab | date:'yyyy-MM-dd'" (ngModelChange)="doce.DataFab=$event"></div>
+        <div class="w3-margin">
+            <button type="button" id="btnVoltar" class="w3-btn w3-red w3-margin-left" (click)="goToIndex()">Voltar</button>
+            <button type="button" id="btnSalvar" class="w3-btn w3-red w3-margin-left" (click)="put()">Salvar</button>
+        </div>
+    </form>
